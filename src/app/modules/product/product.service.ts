@@ -17,9 +17,9 @@ const getSingleProductDeleteFromDB = async (id: string) => {
   const result = await ProductModel.deleteOne({ id });
   return result;
 };
-const updateProductInDB = async (id:string, updateProduct:Partial<Book>) => {
-const result = await ProductModel.updateOne({id}, updateProduct) //  { new: true, runValidators: true } // Return updated book
-return result 
+const updateProductInDB = async (id: string, updateProduct: Partial<Book>) => {
+  const result = await ProductModel.updateOne({ id }, updateProduct); //  { new: true, runValidators: true } // Return updated book
+  return result;
 };
 export const ProductServices = {
   createProductIntoDB,

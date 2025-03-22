@@ -11,11 +11,11 @@ app.use(cors());
 
 // application routes
 app.use('/api/products', ProductRoutes);
-app.use('/api', OrderRoutes)
+app.use('/api', OrderRoutes);
 
 const getAController = (req: Request, res: Response) => {
   const a = 10;
-  res.send({a});
+  res.send({ a });
 };
 
 app.get('/', getAController);

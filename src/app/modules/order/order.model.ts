@@ -1,4 +1,4 @@
-import { Schema, model, connect } from 'mongoose';
+import { Schema, model } from 'mongoose';
 import { Order } from './order.intrerface';
 
 const OrderSchema = new Schema<Order>({

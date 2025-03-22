@@ -25,7 +25,7 @@ const bookSchema = new Schema<Book>(
       required: true,
     },
     description: {
-      type: String, 
+      type: String,
     },
     quantity: {
       type: Number,

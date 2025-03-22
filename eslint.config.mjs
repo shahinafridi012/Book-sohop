@@ -1,16 +1,16 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+// import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts}"] },
-  eslintPluginPrettierRecommended,
+  // eslintPluginPrettierRecommended,
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   {
     ignores: ["node_modules/", "dist/"],
   },
-  { languageOptions: { globals: globals.browser} },
+  { languageOptions: { globals: globals.browser } },
   {
     rules: {
       "no-unused-vars": "error",
@@ -19,7 +19,6 @@ export default [
       "prefer-const": "error",
       "no-undef": "error",
     },
-  
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
