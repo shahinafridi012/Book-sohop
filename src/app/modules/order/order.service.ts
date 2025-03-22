@@ -10,6 +10,7 @@ const calculateTotalRevenue = async () => {
   const result = await OrderModel.aggregate([
     {
       $group: {
+        _id: null,
         totalRevenue: { $sum: { $multiply: ['$totalPrice', 1] } },
       },
     },
